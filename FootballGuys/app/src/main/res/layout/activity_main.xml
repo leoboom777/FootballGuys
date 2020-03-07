@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <FrameLayout
+        android:id="@+id/fl_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:src="@color/gray_dark_bg"
+        app:layout_constraintBottom_toTopOf="@+id/bottomButtonGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include"
+        app:layout_constraintVertical_bias="1.0" />-->
+
+    <RadioGroup
+        android:id="@+id/bottom_button_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton
+            android:id="@+id/bottom_shop_button"
+            style="@style/bottom_button_style"
+            android:drawableTop="@drawable/bottom_button_shop_style_selector"
+            android:text="@string/bottom_button_shop" />
+
+        <RadioButton
+            android:id="@+id/bottom_favorite_button"
+            style="@style/bottom_button_style"
+            android:drawableTop="@drawable/bottom_button_favorite_style_selector"
+            android:text="@string/bottom_button_favorite" />
+
+        <RadioButton
+            android:id="@+id/bottom_cart_button"
+            style="@style/bottom_button_style"
+            android:drawableTop="@drawable/bottom_button_cart_style_selector"
+            android:text="@string/bottom_button_cart" />
+
+        <RadioButton
+            android:id="@+id/bottom_mine_button"
+            style="@style/bottom_button_style"
+            android:drawableTop="@drawable/bottom_button_mine_style_selector"
+            android:text="@string/bottom_button_mine" />
+    </RadioGroup>
+
+
+
+</LinearLayout>
